@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกเมนู - The Breadman.bkk</title>
+    <link href="https://cdn.jsdelivr.net/npm/@line/seed@1.0.0/app.css" rel="stylesheet">
+    <style>
+        :root { --primary-blue: #0621cd; --secondary-green: #757b5b; --bg-color: #fdfdfd; }
+        body { font-family: 'LINE Seed Sans TH', sans-serif; background-color: var(--bg-color); color: #222; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        header { background-color: var(--primary-blue); color: white; width: 100%; padding: 15px 0; text-align: center; font-size: 24px; font-weight: bold; }
+        .container { width: 90%; max-width: 650px; margin-top: 20px; margin-bottom: 50px; }
+        h2 { color: var(--primary-blue); text-align: center; }
+        
+        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px; }
+        .menu-card { background: white; border: 2px solid #eee; border-radius: 15px; overflow: hidden; text-align: center; padding-bottom: 15px; }
+        .menu-img { height: 120px; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center; color: #777; margin-bottom: 10px; }
+        .menu-name { font-weight: bold; color: var(--primary-blue); font-size: 16px; margin-bottom: 10px; }
+        .menu-qty { width: 60px; padding: 5px; text-align: center; font-family: inherit; font-size: 16px; border: 1px solid var(--secondary-green); border-radius: 5px; }
+
+        .form-section { background-color: white; border: 2px solid var(--secondary-green); border-radius: 15px; padding: 20px; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; color: var(--primary-blue); margin-bottom: 5px; }
+        input[type="text"], input[type="tel"], textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 10px; font-family: inherit; font-size: 16px; box-sizing: border-box; }
+        
+        .btn-confirm { display: block; width: 100%; background-color: var(--secondary-green); color: white; font-size: 20px; font-weight: bold; padding: 15px; border: none; border-radius: 15px; cursor: pointer; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>The Breadman.bkk</header>
+    <div class="container">
+        <h2>🍞 เลือกเมนูขนมปัง (12 เมนู)</h2>
+        
+        <div class="menu-grid">
+            <!-- เมนูที่ 1 ถึง 12 ทำโครงสร้างเหมือนกันให้ใส่รูปและชื่อภายหลัง -->
+            <script>
+                // ใช้โค้ดสร้างกล่องเมนู 12 กล่องอัตโนมัติเพื่อความสะอาดของไฟล์
+                for(let i=1; i<=12; i++) {
+                    document.write(`
+                    <div class="menu-card">
+                        <div class="menu-img">🖼️ รูปเมนู ${i}</div>
+                        <div class="menu-name">ชื่อเมนูขนมปัง ${i}</div>
+                        <label>จำนวน:</label> <input type="number" class="menu-qty" min="0" value="0">
+                    </div>
+                    `);
+                }
+            </script>
+        </div>
+
+        <div class="form-section">
+            <h3 style="color: var(--primary-blue); margin-top: 0;">ข้อมูลจัดส่ง</h3>
+            <div class="form-group"><label>ชื่อ-นามสกุล:</label><input type="text" id="cust-name" placeholder="ระบุชื่อ"></div>
+            <div class="form-group"><label>เบอร์โทรศัพท์:</label><input type="tel" id="cust-tel" placeholder="ระบุเบอร์โทร"></div>
+            <div class="form-group"><label>ที่อยู่จัดส่ง:</label><textarea id="cust-address" rows="3" placeholder="ระบุที่อยู่"></textarea></div>
+            
+            <div style="display: flex; align-items: center; gap: 10px; font-weight: bold;">
+                <input type="checkbox" id="save-info" style="width: 20px; height: 20px;">
+                <label for="save-info" style="margin: 0; cursor: pointer; color: #222;">จดจำข้อมูลนี้สำหรับรอบถัดไป</label>
+            </div>
+        </div>
+
+        <button class="btn-confirm" onclick="processOrder()">ยืนยันการสั่งซื้อ</button>
+    </div>
+
+    <script>
+        // ระบบดึงข้อมูลเดิมมาแสดง
+        window.onload = function() {
+            if(localStorage.getItem('breadman_name')) {
+                document.getElementById('cust-name').value = localStorage.getItem('breadman_name');
+                document.getElementById('cust-tel').value = localStorage.getItem('breadman_tel');
+                document.getElementById('cust-address').value = localStorage.getItem('breadman_address');
+                document.getElementById('save-info').checked = true;
+            }
+        }
+
+        // ระบบบันทึกข้อมูลและส่งไปหน้าชำระเงิน
+        function processOrder() {
+            if(document.getElementById('save-info').checked) {
+                localStorage.setItem('breadman_name', document.getElementById('cust-name').value);
+                localStorage.setItem('breadman_tel', document.getElementById('cust-tel').value);
+                localStorage.setItem('breadman_address', document.getElementById('cust-address').value);
+            } else {
+                localStorage.clear();
+            }
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>
