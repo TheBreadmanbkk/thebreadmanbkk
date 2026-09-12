@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สั่งขนมปังตามรอบส่ง - The Breadman.bkk</title>
+    <link href="https://cdn.jsdelivr.net/npm/@line/seed@1.0.0/app.css" rel="stylesheet">
+    <style>
+        :root { --primary-blue: #0621cd; --secondary-green: #757b5b; --bg-color: #fdfdfd; }
+        body { font-family: 'LINE Seed Sans TH', sans-serif; background-color: var(--bg-color); color: #222; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        header { background-color: var(--primary-blue); color: white; width: 100%; padding: 15px 0; text-align: center; font-size: 24px; font-weight: bold; }
+        .container { width: 90%; max-width: 650px; margin-top: 30px; margin-bottom: 50px; }
+        h1 { color: var(--primary-blue); text-align: center; }
+        
+        /* กล่องเลือกรอบส่ง */
+        .round-card { background-color: white; border: 2px solid var(--secondary-green); border-radius: 15px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.2s; display: flex; justify-content: space-between; align-items: center; }
+        .round-card:hover { background-color: #f4f5f0; }
+        .round-date { font-size: 20px; font-weight: bold; color: var(--primary-blue); }
+        .round-time { color: #555; font-size: 16px; margin-top: 5px; }
+        
+        .btn-back { display: block; width: 100%; background-color: #ccc; color: #333; font-size: 18px; font-weight: bold; padding: 15px; text-align: center; border-radius: 15px; text-decoration: none; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header>The Breadman.bkk</header>
+    <div class="container">
+        <h1>📦 สั่งขนมปังตามรอบส่ง</h1>
+        <p style="text-align: center; color: #666; font-size: 18px;">กรุณาเลือกรอบวันที่และเวลาที่คุณต้องการรับขนมปัง</p>
+
+        <!-- รอบที่ 1 -->
+        <div class="round-card">
+            <div>
+                <div class="round-date">วันพุธที่ 15 พฤศจิกายน</div>
+                <div class="round-time">รอบเช้า 09:00 - 12:00 น.</div>
+            </div>
+            <input type="radio" name="delivery-round" style="width: 20px; height: 20px;">
+        </div>
+
+        <!-- รอบที่ 2 -->
+        <div class="round-card">
+            <div>
+                <div class="round-date">วันเสาร์ที่ 18 พฤศจิกายน</div>
+                <div class="round-time">รอบบ่าย 13:00 - 16:00 น.</div>
+            </div>
+            <input type="radio" name="delivery-round" style="width: 20px; height: 20px;">
+        </div>
+
+        <!-- รอบที่ 3 -->
+        <div class="round-card">
+            <div>
+                <div class="round-date">วันพุธที่ 22 พฤศจิกายน</div>
+                <div class="round-time">รอบเช้า 09:00 - 12:00 น.</div>
+            </div>
+            <input type="radio" name="delivery-round" style="width: 20px; height: 20px;">
+        </div>
+
+        <a href="index.html" class="btn-back">กลับหน้าหลัก</a>
+    </div>
+</body>
+</html>
