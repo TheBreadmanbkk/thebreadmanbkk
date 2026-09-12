@@ -11,160 +11,48 @@
             --secondary-green: #757b5b;
             --bg-color: #fdfdfd;
         }
-        body {
-            font-family: 'LINE Seed Sans TH', sans-serif;
-            background-color: var(--bg-color);
-            color: #222;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-color: var(--primary-blue);
-            color: white;
-            width: 100%;
-            padding: 15px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .nav-container {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .container {
-            width: 90%;
-            max-width: 650px;
-            margin-top: 30px;
-            margin-bottom: 50px;
-        }
-        .image-placeholder {
-            width: 100%;
-            height: 250px;
-            background-color: #f0f0ed;
-            border: 2px dashed var(--secondary-green);
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-size: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .btn-main {
-            display: block;
-            width: 100%;
-            background-color: var(--primary-blue);
-            color: white;
-            font-family: 'LINE Seed Sans TH', sans-serif;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 18px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            box-sizing: border-box;
-            box-shadow: 0 4px 12px rgba(6, 33, 205, 0.15);
-            transition: all 0.2s ease-in-out;
-        }
-        .btn-green {
-            background-color: var(--secondary-green);
-            box-shadow: 0 4px 12px rgba(117, 123, 91, 0.15);
-        }
-        .btn-outline {
-            background-color: white;
-            color: var(--primary-blue);
-            border: 3px solid var(--primary-blue);
-        }
-        .order-section {
-            background-color: white;
-            border: 2px solid var(--secondary-green);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-        }
-        .order-title {
-            color: var(--primary-blue);
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 0;
-            text-align: center;
-        }
-        .b1-placeholder {
-            background-color: #f9f9f9;
-            border: 1px dashed #ccc;
-            padding: 15px;
-            border-radius: 10px;
-            color: #777;
-            text-align: center;
-            font-size: 18px;
-            margin: 15px 0 25px 0;
-        }
+        body { font-family: 'LINE Seed Sans TH', sans-serif; background-color: var(--bg-color); color: #222; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        header { background-color: var(--primary-blue); color: white; width: 100%; padding: 15px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 26px; font-weight: bold; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 18px; font-weight: bold; }
+        .container { width: 90%; max-width: 650px; margin-top: 30px; margin-bottom: 50px; }
+        .image-placeholder { width: 100%; height: 250px; background-color: #f0f0ed; border: 2px dashed var(--secondary-green); border-radius: 20px; display: flex; justify-content: center; align-items: center; color: #666; font-size: 20px; margin-bottom: 30px; text-align: center; }
+        .btn-main { display: block; width: 100%; background-color: var(--primary-blue); color: white; font-size: 22px; font-weight: bold; padding: 20px; margin-bottom: 20px; border: none; border-radius: 18px; cursor: pointer; text-decoration: none; text-align: center; box-sizing: border-box; box-shadow: 0 4px 12px rgba(6, 33, 205, 0.15); transition: all 0.2s ease-in-out; }
+        .btn-green { background-color: var(--secondary-green); box-shadow: 0 4px 12px rgba(117, 123, 91, 0.15); }
+        .btn-outline { background-color: white; color: var(--primary-blue); border: 3px solid var(--primary-blue); }
+        .order-section { background-color: white; border: 2px solid var(--secondary-green); border-radius: 20px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+        .order-title { color: var(--primary-blue); font-size: 24px; font-weight: bold; margin-top: 0; text-align: center; }
+        .b1-placeholder { background-color: #f9f9f9; border: 1px dashed #ccc; padding: 15px; border-radius: 10px; color: #777; text-align: center; font-size: 18px; margin: 15px 0 25px 0; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-container">
             <div class="logo">The Breadman.bkk</div>
             <div class="nav-links">
-                <a href="#">หน้าแรก</a>
+                <a href="index.html">หน้าแรก</a>
                 <a href="#contact">ติดต่อเรา</a>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <div class="image-placeholder">
-            🖼️ พื้นที่สำหรับใส่รูปภาพขนมปังของคุณ<br>( Banner Image Placeholder )
-        </div>
+        <div class="image-placeholder">🖼️ พื้นที่สำหรับใส่รูปภาพขนมปังของคุณ</div>
 
-        <a href="#about" class="btn-main">
-            1. ข้อมูลขนมปังซาวโดว์เนื้อนุ่ม / About Soft Sourdough
-        </a>
+        <a href="#about" class="btn-main">1. ข้อมูลขนมปังซาวโดว์เนื้อนุ่ม / About Soft Sourdough</a>
         
         <div class="order-section">
             <div class="order-title">2. สั่งขนมปัง / Order Now</div>
-            <div class="b1-placeholder">
-                [ B1: พื้นที่เขียนอธิบายบริการที่ไม่เหมือนใครของคุณ ]
-            </div>
+            <div class="b1-placeholder">[ B1: พื้นที่เขียนอธิบายบริการที่ไม่เหมือนใครของคุณ ]</div>
             
-            <a href="#round-order" class="btn-main" style="font-size: 20px; padding: 16px;">
-                📦 สั่งขนมปังตามรอบส่ง
-            </a>
-            <a href="#subscription" class="btn-main btn-green" style="font-size: 20px; padding: 16px; margin-bottom: 0;">
-                🗓️ สมัครแพ็คเกจขนมปังรายเดือน
-            </a>
+            <!-- แก้ไขลิงก์ตรงนี้ให้ไปไฟล์ใหม่ -->
+            <a href="round-order.html" class="btn-main" style="font-size: 20px; padding: 16px;">📦 สั่งขนมปังตามรอบส่ง</a>
+            <a href="subscription.html" class="btn-main btn-green" style="font-size: 20px; padding: 16px; margin-bottom: 0;">🗓️ สมัครแพ็คเกจขนมปังรายเดือน</a>
         </div>
 
-        <a href="#wholesale" class="btn-main btn-outline">
-            3. ขายส่งสำหรับร้านอาหารและการจัดเลี้ยง
-        </a>
-
-        <a href="#contact" class="btn-main btn-green">
-            4. ติดต่อเรา / Contact Us
-        </a>
+        <a href="#wholesale" class="btn-main btn-outline">3. ขายส่งสำหรับร้านอาหารและการจัดเลี้ยง</a>
+        <a href="#contact" class="btn-main btn-green">4. ติดต่อเรา / Contact Us</a>
     </div>
-
 </body>
 </html>
