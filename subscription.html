@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แพ็คเกจรายเดือน - The Breadman.bkk</title>
+    <link href="https://cdn.jsdelivr.net/npm/@line/seed@1.0.0/app.css" rel="stylesheet">
+    <style>
+        :root { --primary-blue: #0621cd; --secondary-green: #757b5b; --bg-color: #fdfdfd; }
+        body { font-family: 'LINE Seed Sans TH', sans-serif; background-color: var(--bg-color); color: #222; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        header { background-color: var(--primary-blue); color: white; width: 100%; padding: 15px 0; text-align: center; font-size: 24px; font-weight: bold; }
+        .container { width: 90%; max-width: 700px; margin-top: 30px; margin-bottom: 50px; }
+        h1 { color: var(--secondary-green); text-align: center; }
+        .desc-box { background-color: #f4f5f0; padding: 20px; border-radius: 15px; margin-bottom: 30px; text-align: center; border: 1px dashed var(--secondary-green); }
+        
+        /* กล่องแพ็คเกจ */
+        .package-grid { display: grid; gap: 20px; }
+        .package-card { border: 2px solid var(--primary-blue); border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+        .pkg-img { background-color: #e0e0e0; height: 180px; display: flex; justify-content: center; align-items: center; color: #777; font-size: 16px; border-bottom: 2px solid var(--primary-blue); }
+        .pkg-content { padding: 20px; }
+        .pkg-title { font-size: 22px; font-weight: bold; color: var(--primary-blue); margin-bottom: 10px; }
+        .pkg-detail { font-size: 16px; color: #555; margin-bottom: 15px; }
+        .btn-select { display: block; width: 100%; background-color: var(--secondary-green); color: white; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; }
+        
+        .btn-back { display: block; width: 100%; background-color: #ccc; color: #333; font-size: 18px; font-weight: bold; padding: 15px; text-align: center; border-radius: 15px; text-decoration: none; margin-top: 30px; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <header>The Breadman.bkk</header>
+    <div class="container">
+        <h1>🗓️ สมัครแพ็คเกจขนมปังรายเดือน</h1>
+        
+        <div class="desc-box">
+            [ พื้นที่อธิบายบริการแพ็คเกจรายเดือน: เช่น ส่งฟรีทุกสัปดาห์, ได้รับขนมปังสดใหม่ส่งตรงถึงบ้านคุณตลอดทั้งเดือน ในราคาที่คุ้มค่ากว่า ]
+        </div>
+
+        <div class="package-grid">
+            <!-- แพ็คเกจ 1 -->
+            <div class="package-card">
+                <div class="pkg-img">🖼️ เว้นที่ใส่รูปแพ็คเกจ 1</div>
+                <div class="pkg-content">
+                    <div class="pkg-title">Package A : เริ่มต้นเบาๆ</div>
+                    <div class="pkg-detail">[ ใส่รายละเอียด: ขนมปัง 4 ก้อน/เดือน ]</div>
+                    <a href="#" class="btn-select">เลือกแพ็คเกจนี้</a>
+                </div>
+            </div>
+
+            <!-- แพ็คเกจ 2 -->
+            <div class="package-card">
+                <div class="pkg-img">🖼️ เว้นที่ใส่รูปแพ็คเกจ 2</div>
+                <div class="pkg-content">
+                    <div class="pkg-title">Package B : ครอบครัวเล็ก</div>
+                    <div class="pkg-detail">[ ใส่รายละเอียด: ขนมปัง 8 ก้อน/เดือน ]</div>
+                    <a href="#" class="btn-select">เลือกแพ็คเกจนี้</a>
+                </div>
+            </div>
+
+            <!-- แพ็คเกจ 3 -->
+            <div class="package-card">
+                <div class="pkg-img">🖼️ เว้นที่ใส่รูปแพ็คเกจ 3</div>
+                <div class="pkg-content">
+                    <div class="pkg-title">Package C : Sourdough Lover</div>
+                    <div class="pkg-detail">[ ใส่รายละเอียด: ขนมปัง 12 ก้อน/เดือน ]</div>
+                    <a href="#" class="btn-select">เลือกแพ็คเกจนี้</a>
+                </div>
+            </div>
+
+            <!-- แพ็คเกจ 4 -->
+            <div class="package-card">
+                <div class="pkg-img">🖼️ เว้นที่ใส่รูปแพ็คเกจ 4</div>
+                <div class="pkg-content">
+                    <div class="pkg-title">Package D : จัดเต็มประจำบ้าน</div>
+                    <div class="pkg-detail">[ ใส่รายละเอียด: ขนมปัง 16 ก้อน/เดือน ]</div>
+                    <a href="#" class="btn-select">เลือกแพ็คเกจนี้</a>
+                </div>
+            </div>
+
+            <!-- แพ็คเกจ 5 -->
+            <div class="package-card">
+                <div class="pkg-img">🖼️ เว้นที่ใส่รูปแพ็คเกจ 5</div>
+                <div class="pkg-content">
+                    <div class="pkg-title">Package E : พรีเมียมสุดคุ้ม</div>
+                    <div class="pkg-detail">[ ใส่รายละเอียด: ขนมปัง 20 ก้อน/เดือน + ของแถมพิเศษ ]</div>
+                    <a href="#" class="btn-select">เลือกแพ็คเกจนี้</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">กลับหน้าหลัก</a>
+    </div>
+</body>
+</html>
